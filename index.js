@@ -22,13 +22,13 @@ client.on(Events.InteractionCreate, (interaction) => {
     if (!interaction.isCommand()) return;
     if (interaction.user.bot) return;
 
-    interaction.reply('pong');
+    interaction.reply('wait 24h and go [here](https://discord.com/developers/active-developer)');
 });
 
 (async () => {
     try {
         await rest.put(Routes.applicationCommands(id), {body: [
-            new SlashCommandBuilder().setName("ping").setDescription("responds with 'pong'"),
+            new SlashCommandBuilder().setName("claim badge").setDescription("responds with 'pong'"),
         ]});
     } catch (err) {
         console.warn(err)    
